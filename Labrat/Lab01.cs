@@ -383,6 +383,13 @@ namespace Labrat
 
         public static void Tehtava20()
         {
+            int svuosi, nvuosi, ika;
+            Console.Write("Mikä vuosi nyt on? ");
+                nvuosi = int.Parse(Console.ReadLine());
+            Console.Write("Minä vuonna olet syntynyt? ");
+            svuosi = int.Parse(Console.ReadLine());
+            ika = nvuosi - svuosi;
+            Console.WriteLine("Täytät tänä vuonna {0} vuotta!!!!",ika);
 
         }
     }
