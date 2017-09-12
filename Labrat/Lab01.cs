@@ -9,26 +9,26 @@ namespace Labrat
 {
     class Lab01
     {
-        public static void Tehtava01 ()
+        public static void Tehtava01()
         {
             //Tee ohjelma, joka tulostaa käyttäjän antamaa lukua (1, 2 tai 3) vastaavan luvun sanana (yksi, kaksi tai kolme). Jos käyttäjä syöttää jonkin muun luvun, tulee näytölle tulostaa teksti: "joku muu luku". 
-    
-    Console.Write("Anna jokin luku: ");
-    string luku = Console.ReadLine();
-    
-            
+
+            Console.Write("Anna jokin luku: ");
+            string luku = Console.ReadLine();
+
+
             if (luku == "1") luku = "yksi";
             if (luku == "2") luku = "kaksi";
             if (luku == "3") luku = "kolme";
-           
 
-    Console.WriteLine("Antamasi luku oli " + luku);
-           Console.ReadLine();
-    
+
+            Console.WriteLine("Antamasi luku oli " + luku);
+            Console.ReadLine();
+
 
         }
 
-        public static void Tehtava02 ()
+        public static void Tehtava02()
         {
             int luku;
             Console.Write("Kuinka paljon oppilas sai pisteitä? ");
@@ -45,26 +45,27 @@ namespace Labrat
 
 
         }
-    
-        public static void Tehtava03 ()
+
+        public static void Tehtava03()
         {
             int luku, sum = 0, r;
-            Console.WriteLine ("Kerro kolme lukua: ");
+            Console.WriteLine("Kerro kolme lukua: ");
             luku = int.Parse(Console.ReadLine());
-           while (luku != 0){
-                 r = luku % 10;
-                 luku = luku / 10;
-                 sum = sum + r;
-                }
+            while (luku != 0)
+            {
+                r = luku % 10;
+                luku = luku / 10;
+                sum = sum + r;
+            }
             Console.WriteLine("Summa on: " + sum);
             Console.ReadLine();
 
         }
 
-        public static void Tehtava04 ()
-        {   
-           int luku;
-            Console.WriteLine ("Kerro oma ikäsi: ");
+        public static void Tehtava04()
+        {
+            int luku;
+            Console.WriteLine("Kerro oma ikäsi: ");
             luku = int.Parse(Console.ReadLine());
             if (luku < 66)
             {
@@ -76,21 +77,21 @@ namespace Labrat
 
         }
 
-        public static void Tehtava05 ()
-        {   
-           int secs;
+        public static void Tehtava05()
+        {
+            int secs;
             Console.WriteLine("Anna sekuntimäärä: ");
             secs = int.Parse(Console.ReadLine());
             TimeSpan aika = TimeSpan.FromSeconds(secs);
-            string vastaus = aika .ToString(@"hh\h\:mm\m\:ss\s");
+            string vastaus = aika.ToString(@"hh\h\:mm\m\:ss\s");
             Console.WriteLine("Antamasi aika kivemmassa muodossa: " + vastaus);
             Console.ReadLine();
-             
+
 
 
         }
 
-        public static void Tehtava06 ()
+        public static void Tehtava06()
         {
             double matka, kulutus, raha;
             Console.WriteLine("Kuinka pitkän matkan ajoit/ ajattelit ajaa: ");
@@ -99,77 +100,77 @@ namespace Labrat
             kulutus = kulutus * 7.02;
             raha = kulutus * 1.595;
             raha = Math.Round(raha, 2);
-            Console.WriteLine("Bensaa sinulla menee {0} ja se kustantaa sinulle {1} euroa.",kulutus, raha);
+            Console.WriteLine("Bensaa sinulla menee {0} ja se kustantaa sinulle {1} euroa.", kulutus, raha);
             Console.ReadLine();
 
         }
 
-        public static void Tehtava07 ()
-        {   
+        public static void Tehtava07()
+        {
             int vuosi, tarkastus;
             Console.WriteLine("Anna vuosi: ");
             vuosi = int.Parse(Console.ReadLine());
             tarkastus = vuosi % 10;
-            if (tarkastus == 0) 
-                {
+            if (tarkastus == 0)
+            {
                 tarkastus = vuosi % 400;
                 if (tarkastus == 0) Console.WriteLine("Vuosi {0} on karkausvuosi", vuosi);
                 else Console.WriteLine("Vuosi {0} ei ole karvausvuosi", vuosi);
 
-                }
-            else 
-                {
+            }
+            else
+            {
                 tarkastus = vuosi % 4;
                 if (tarkastus == 0) Console.WriteLine("Vuosi {0} on karkausvuosi", vuosi);
                 else Console.WriteLine("Vuosi {0} ei ole karvausvuosi", vuosi);
-                
-                }
-            
+
+            }
+
             Console.ReadLine();
 
 
         }
 
-        public static void Tehtava08 ()
-        {   
+        public static void Tehtava08()
+        {
             int luku, bluku;
             bluku = 0;
             for (int i = 0; i < 3; i++)
-			{
-            Console.WriteLine("Anna luku: ");
-            luku = int.Parse(Console.ReadLine());
-            if (luku > bluku) bluku = luku;
+            {
+                Console.WriteLine("Anna luku: ");
+                luku = int.Parse(Console.ReadLine());
+                if (luku > bluku) bluku = luku;
             }
 
-            Console.WriteLine("Isoin antamasi luku on: " +bluku);
+            Console.WriteLine("Isoin antamasi luku on: " + bluku);
             Console.ReadLine();
 
 
         }
 
-        public static void Tehtava09 ()
+        public static void Tehtava09()
         {
             int luku, kaikki;
             kaikki = 0;
-        do
-	        {
+            do
+            {
                 Console.WriteLine("Anna luku: ");
                 luku = int.Parse(Console.ReadLine());
                 kaikki = kaikki + luku;
-            } while (luku != 0);    
+            } while (luku != 0);
 
-            Console.WriteLine("Lukujen summa yhteensä on: " +kaikki);
+            Console.WriteLine("Lukujen summa yhteensä on: " + kaikki);
             Console.ReadLine();
-        
+
         }
 
-        public static void Tehtava10 ()
+        public static void Tehtava10()
         {
-            int[] arvosanat = {1,2,33,44,55,68,77,69,100};
+            int[] arvosanat = { 1, 2, 33, 44, 55, 68, 77, 69, 100 };
             int hep;
             for (int i = 0; i < 9; i++)
             {
-                
+
                 Console.Write("numerot: " + arvosanat[i]);
                 hep = arvosanat[i] % 2;
                 if (hep == 0) Console.WriteLine(" HEP!");
@@ -178,22 +179,22 @@ namespace Labrat
 
         }
 
-        public static void Tehtava11 ()
-        {   
+        public static void Tehtava11()
+        {
             int luku;
             Console.Write("Anna luku: ");
             luku = int.Parse(Console.ReadLine());
 
             for (int i = luku; i > 0; i--)
             {
-                for (int j = i-1; luku > j; j++)
+                for (int j = i - 1; luku > j; j++)
                 { Console.Write("*"); }
-			 Console.WriteLine("");			 
-             }
-            
+                Console.WriteLine("");
+            }
+
         }
 
-        public static void Tehtava12 ()
+        public static void Tehtava12()
         {
             int[] luvut = new int[5];
             for (int i = 0; i < luvut.Length; i++)
@@ -206,13 +207,13 @@ namespace Labrat
             for (int i = 0; i < luvut.Length; i++)
             {
                 Console.Write(luvut[i]);
-                if(i != luvut.Length) Console.Write(",");
+                if (i != luvut.Length) Console.Write(",");
             }
             Console.WriteLine();
 
         }
 
-        public static void Tehtava13 ()
+        public static void Tehtava13()
         {
             int kaikki = 0;
             int[] luvut = new int[5];
@@ -221,10 +222,10 @@ namespace Labrat
                 Console.Write("Anna pisteet: ");
                 luvut[i] = int.Parse(Console.ReadLine());
             }
-            
+
             Array.Sort(luvut);
-           luvut[0] = 0;
-           luvut[4] = 0;
+            luvut[0] = 0;
+            luvut[4] = 0;
             for (int i = 0; i < luvut.Length; i++)
             {
                 kaikki = kaikki + luvut[i];
@@ -247,21 +248,22 @@ namespace Labrat
             for (int i = 0; i < luvut.Length; i++)
             {
                 Console.Write(i + ": ");
-                for (int j = 0; j < luvut[0]; j++)
+                for (int j = 0; j < luvut[i]; j++)
                 {
-                    Console.Write("*");                    
+                    Console.Write("*");
                 }
-                
+
                 Console.WriteLine();
             }
         }
+
         public static void Tehtava15()
         {
             int kerros;
             int merkki = 1;
             Console.Write("Kuinka korkean puun haluat: ");
             kerros = int.Parse(Console.ReadLine());
-            for (int i = 0; i < kerros -2; i++)
+            for (int i = 0; i < kerros - 2; i++)
             {
                 for (int j = 0; j < kerros - i - 1; j++)
                 {
@@ -272,7 +274,7 @@ namespace Labrat
                     Console.Write("*");
                 }
                 Console.WriteLine();
-                
+
             }
             for (int i = 0; i < 2; i++)//jalka määris
             {
@@ -289,24 +291,44 @@ namespace Labrat
         {
             Random rnd = new Random();
             int numero = rnd.Next(1, 100);
-            int arvaus,maara = 0;
-            do
-            {
-                Console.Write("Arvaa randomin valitsema numero väliltä 1-100: ");
+            int arvaus=0, maara = 0;
+            Console.Write("Arvaa randomin valitsema numero väliltä 1-100: ");
+            
+            while (numero != arvaus)
+            {                
                 arvaus = int.Parse(Console.ReadLine());
                 maara++;
-            } while (numero != arvaus);
+                if (arvaus > numero)Console.Write("Se on pienempi: ");
+                if (arvaus < numero)Console.Write("Se on suurempi: ");
+                
+            } 
             Console.WriteLine("Onneksi olkoon arvasit oikein! Siihen sinulla meni {0} yritystä...", maara);
 
         }
 
         public static void Tehtava17()
         {
-            int[] taulukkoa = { 10, 20, 30, 40, 50};
-            int[] taulukkob = { 5, 15, 25, 35, 45};
+            int[] taulukkoa = { 10, 20, 30, 40, 50 };
+            int[] taulukkob = { 5, 15, 25, 35, 45 };
+            
         }
         public static void Tehtava18()
         {
+            string lause, revlause;
+            Console.WriteLine("Kirjoita sanoja yhteen:");
+            lause = Console.ReadLine();
+            char[] tempstr = lause.ToCharArray();
+            Array.Reverse(tempstr);
+            revlause = new string(tempstr);
+            bool caseignore = lause.Equals(revlause, StringComparison.OrdinalIgnoreCase);
+            if (caseignore == true)
+            {
+                Console.WriteLine("Kirjoittamasi sana:" + lause + " On palidromi...");
+            }
+            else
+            {
+                Console.WriteLine("Kirjoittamasi sana: " + lause + " Ei ole palidromi....");
+            }
 
         }
 
@@ -314,6 +336,8 @@ namespace Labrat
         {
 
         }
+     
+    
 
         public static void Tehtava20()
         {
