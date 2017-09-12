@@ -106,7 +106,7 @@ namespace Labrat
 
         public static void Tehtava07 ()
         {   
-            int vuosi, tarkastus, tarka;
+            int vuosi, tarkastus;
             Console.WriteLine("Anna vuosi: ");
             vuosi = int.Parse(Console.ReadLine());
             tarkastus = vuosi % 10;
@@ -164,40 +164,124 @@ namespace Labrat
         }
 
         public static void Tehtava10 ()
-        {   
+        {
+            int[] arvosanat = {1,2,33,44,55,68,77,69,100};
+            int hep;
+            for (int i = 0; i < 9; i++)
+            {
+                
+                Console.Write("numerot: " + arvosanat[i]);
+                hep = arvosanat[i] % 2;
+                if (hep == 0) Console.WriteLine(" HEP!");
+                else Console.WriteLine("");
+            }
 
         }
 
         public static void Tehtava11 ()
         {   
             int luku;
-            Console.WriteLine("Anna luku: ");
+            Console.Write("Anna luku: ");
             luku = int.Parse(Console.ReadLine());
 
-            for (int i = luku; i < 1; i--)
-			 {
-			 for (int j = 1; j < luku; j++)
-			  {
-                Console.Write("*");
-			  }
+            for (int i = luku; i > 0; i--)
+            {
+                for (int j = i-1; luku > j; j++)
+                { Console.Write("*"); }
+			 Console.WriteLine("");			 
              }
-            Console.ReadLine();
+            
         }
 
         public static void Tehtava12 ()
         {
+            int[] luvut = new int[5];
+            for (int i = 0; i < luvut.Length; i++)
+            {
+                Console.Write("Anna luku: ");
+                luvut[i] = int.Parse(Console.ReadLine());
+            }
+            Console.Write("Numerot järjestyksessä: ");
+            Array.Sort(luvut);
+            for (int i = 0; i < luvut.Length; i++)
+            {
+                Console.Write(luvut[i]);
+                if(i != luvut.Length) Console.Write(",");
+            }
+            Console.WriteLine();
 
         }
 
         public static void Tehtava13 ()
-        {   
-
+        {
+            int kaikki = 0;
+            int[] luvut = new int[5];
+            for (int i = 0; i < luvut.Length; i++)
+            {
+                Console.Write("Anna pisteet: ");
+                luvut[i] = int.Parse(Console.ReadLine());
+            }
+            
+            Array.Sort(luvut);
+           luvut[0] = 0;
+           luvut[4] = 0;
+            for (int i = 0; i < luvut.Length; i++)
+            {
+                kaikki = kaikki + luvut[i];
+            }
+            Console.WriteLine("Kokonaispisteet yhteensä: " + kaikki);
         }
 
         public static void Tehtava14 ()
-        {   
+        {
+            int luku = 0;
+            int[] luvut = new int[5];
+            while (luku != 9)
+            {
+                Console.Write("Anna arvosanat ja lopeta antamalla numero 9: ");
+                luku = int.Parse(Console.ReadLine());
+                luvut[luku] = luvut[luku] + 1;
+            }
+            for (int i = 0; i < luvut.Length; i++)
+            {
+                Console.Write(i + ": ");
+                for (int j = 0; j < luvut[luku]; j++)
+                {
+                    Console.Write("*");
+                }
+
+            }
 
         }
-}
+
+        public static void Tehtava15()
+        {
+
+        }
+
+        public static void Tehtava16()
+        {
+
+        }
+
+        public static void Tehtava17()
+        {
+
+        }
+        public static void Tehtava18()
+        {
+
+        }
+
+        public static void Tehtava19()
+        {
+
+        }
+
+        public static void Tehtava20()
+        {
+
+        }
+    }
 
 }
