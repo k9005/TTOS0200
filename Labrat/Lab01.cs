@@ -236,11 +236,11 @@ namespace Labrat
         {
             int luku = 0;
             int[] luvut = new int[6];
-            while (luku != 9)
+            while (luku != 11)
             {
 
                 luvut[luku] = luvut[luku] + 1;
-                Console.Write("Anna arvosanat ja lopeta antamalla numero 9: ");
+                Console.Write("Anna arvosanat ja lopeta antamalla numero 11: ");
                 luku = int.Parse(Console.ReadLine());
             }
             luvut[0] = luvut[0] - 1;
@@ -257,11 +257,46 @@ namespace Labrat
         }
         public static void Tehtava15()
         {
-          
+            int kerros;
+            int merkki = 1;
+            Console.Write("Kuinka korkean puun haluat: ");
+            kerros = int.Parse(Console.ReadLine());
+            for (int i = 0; i < kerros -2; i++)
+            {
+                for (int j = 0; j < kerros - i - 1; j++)
+                {
+                    Console.Write(" ");
+                }
+                for (int k = 0; k < i * 2 + 1; k++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+                
+            }
+            for (int i = 0; i < 2; i++)//jalka määris
+            {
+                for (int x = 0; x < kerros - 1; x++)
+                {
+                    Console.Write(" ");
+
+                }
+                Console.WriteLine("*");
+            }
         }
 
         public static void Tehtava16()
         {
+            Random rnd = new Random();
+            int numero = rnd.Next(1, 100);
+            int arvaus,maara = 0;
+            do
+            {
+                Console.Write("Arvaa randomin valitsema numero väliltä 1-100: ");
+                arvaus = int.Parse(Console.ReadLine());
+                maara++;
+            } while (numero != arvaus);
+            Console.WriteLine("Onneksi olkoon arvasit oikein! Siihen sinulla meni {0} yritystä...", maara);
 
         }
 
