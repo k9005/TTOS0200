@@ -106,17 +106,61 @@ namespace Labrat
 
         public static void Tehtava07 ()
         {   
+            int vuosi, tarkastus, tarka;
+            Console.WriteLine("Anna vuosi: ");
+            vuosi = int.Parse(Console.ReadLine());
+            tarkastus = vuosi % 10;
+            if (tarkastus == 0) 
+                {
+                tarkastus = vuosi % 400;
+                if (tarkastus == 0) Console.WriteLine("Vuosi {0} on karkausvuosi", vuosi);
+                else Console.WriteLine("Vuosi {0} ei ole karvausvuosi", vuosi);
+
+                }
+            else 
+                {
+                tarkastus = vuosi % 4;
+                if (tarkastus == 0) Console.WriteLine("Vuosi {0} on karkausvuosi", vuosi);
+                else Console.WriteLine("Vuosi {0} ei ole karvausvuosi", vuosi);
+                
+                }
+            
+            Console.ReadLine();
+
 
         }
 
         public static void Tehtava08 ()
         {   
+            int luku, bluku;
+            bluku = 0;
+            for (int i = 0; i < 3; i++)
+			{
+            Console.WriteLine("Anna luku: ");
+            luku = int.Parse(Console.ReadLine());
+            if (luku > bluku) bluku = luku;
+            }
+
+            Console.WriteLine("Isoin antamasi luku on: " +bluku);
+            Console.ReadLine();
+
 
         }
 
         public static void Tehtava09 ()
         {
+            int luku, kaikki;
+            kaikki = 0;
+        do
+	        {
+                Console.WriteLine("Anna luku: ");
+                luku = int.Parse(Console.ReadLine());
+                kaikki = kaikki + luku;
+            } while (luku != 0);    
 
+            Console.WriteLine("Lukujen summa yhteensä on: " +kaikki);
+            Console.ReadLine();
+        
         }
 
         public static void Tehtava10 ()
@@ -126,7 +170,18 @@ namespace Labrat
 
         public static void Tehtava11 ()
         {   
+            int luku;
+            Console.WriteLine("Anna luku: ");
+            luku = int.Parse(Console.ReadLine());
 
+            for (int i = luku; i < 1; i--)
+			 {
+			 for (int j = 1; j < luku; j++)
+			  {
+                Console.Write("*");
+			  }
+             }
+            Console.ReadLine();
         }
 
         public static void Tehtava12 ()
