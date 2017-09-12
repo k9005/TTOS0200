@@ -49,7 +49,7 @@ namespace Labrat
         public static void Tehtava03 ()
         {
             int luku, sum = 0, r;
-            Console.Write ("Kerro kolme lukua: ");
+            Console.WriteLine ("Kerro kolme lukua: ");
             luku = int.Parse(Console.ReadLine());
            while (luku != 0){
                  r = luku % 10;
@@ -63,21 +63,44 @@ namespace Labrat
 
         public static void Tehtava04 ()
         {   
-           int luku, r;
-            luku = 555;
-           luku = luku / 10;
-            Console.WriteLine("summa: " + luku);
-
+           int luku;
+            Console.WriteLine ("Kerro oma ikäsi: ");
+            luku = int.Parse(Console.ReadLine());
+            if (luku < 66)
+            {
+                if (luku < 18) Console.WriteLine("Pyh.. Olet tenava!");
+                else Console.WriteLine("Hehe.. Olet aikuinen!");
+            }
+            else Console.WriteLine("Jäbä on Seniori JOU!");
+            Console.ReadLine();
 
         }
 
         public static void Tehtava05 ()
         {   
+           int secs;
+            Console.WriteLine("Anna sekuntimäärä: ");
+            secs = int.Parse(Console.ReadLine());
+            TimeSpan aika = TimeSpan.FromSeconds(secs);
+            string vastaus = aika .ToString(@"hh\h\:mm\m\:ss\s");
+            Console.WriteLine("Antamasi aika kivemmassa muodossa: " + vastaus);
+            Console.ReadLine();
+             
+
 
         }
 
         public static void Tehtava06 ()
         {
+            double matka, kulutus, raha;
+            Console.WriteLine("Kuinka pitkän matkan ajoit/ ajattelit ajaa: ");
+            matka = double.Parse(Console.ReadLine());
+            kulutus = matka / 100;
+            kulutus = kulutus * 7.02;
+            raha = kulutus * 1.595;
+            raha = Math.Round(raha, 2);
+            Console.WriteLine("Bensaa sinulla menee {0} ja se kustantaa sinulle {1} euroa.",kulutus, raha);
+            Console.ReadLine();
 
         }
 
