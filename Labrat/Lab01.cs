@@ -302,7 +302,8 @@ namespace Labrat
 
         public static void Tehtava17()
         {
-
+            int[] taulukkoa = { 10, 20, 30, 40, 50};
+            int[] taulukkob = { 5, 15, 25, 35, 45};
         }
         public static void Tehtava18()
         {
