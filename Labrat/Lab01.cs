@@ -232,31 +232,32 @@ namespace Labrat
             Console.WriteLine("Kokonaispisteet yhteensä: " + kaikki);
         }
 
-        public static void Tehtava14 ()
+        public static void Tehtava14()
         {
             int luku = 0;
-            int[] luvut = new int[5];
+            int[] luvut = new int[6];
             while (luku != 9)
             {
+
+                luvut[luku] = luvut[luku] + 1;
                 Console.Write("Anna arvosanat ja lopeta antamalla numero 9: ");
                 luku = int.Parse(Console.ReadLine());
-                luvut[luku] = luvut[luku] + 1;
             }
+            luvut[0] = luvut[0] - 1;
             for (int i = 0; i < luvut.Length; i++)
             {
                 Console.Write(i + ": ");
-                for (int j = 0; j < luvut[luku]; j++)
+                for (int j = 0; j < luvut[0]; j++)
                 {
-                    Console.Write("*");
+                    Console.Write("*");                    
                 }
-
+                
+                Console.WriteLine();
             }
-
         }
-
         public static void Tehtava15()
         {
-
+          
         }
 
         public static void Tehtava16()
