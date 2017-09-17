@@ -6,11 +6,20 @@ using System.Threading.Tasks;
 
 namespace Labrat
 {
-    class Program
+   /* class Program
     {
         static void Main(string[] args)
         {
             Lab01.Tehtava20();
         }
+    }*/
+
+
+    class Laitteet
+    {
+        static void Main(string[] args)
+        {
+            Kiuas.harvia();
+        }
     }
-}
+        }
