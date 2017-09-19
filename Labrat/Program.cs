@@ -19,7 +19,7 @@ namespace Labrat
     {
         static void Main(string[] args)
         {
-            Kiuas.harvia();
+            Pesukone.rosenlew();
         }
     }
         }
