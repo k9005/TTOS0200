@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labrat", "Labrat\Labrat.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opiskelija", "ConsoleApp1\Opiskelija.csproj", "{29521FC2-3429-41ED-8263-6128E4F7FC8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kuivaaja", "Kuivaaja\Kuivaaja.csproj", "{2DE9B70D-9499-45E8-A4C1-4AD868981F4D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{29521FC2-3429-41ED-8263-6128E4F7FC8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29521FC2-3429-41ED-8263-6128E4F7FC8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29521FC2-3429-41ED-8263-6128E4F7FC8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DE9B70D-9499-45E8-A4C1-4AD868981F4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DE9B70D-9499-45E8-A4C1-4AD868981F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DE9B70D-9499-45E8-A4C1-4AD868981F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DE9B70D-9499-45E8-A4C1-4AD868981F4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
