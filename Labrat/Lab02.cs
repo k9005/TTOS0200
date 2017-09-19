@@ -211,18 +211,18 @@ namespace Labrat
                 
             }
         }
-        public class Auto
+        public class Vehicle
         {
             public string name { get; set; }
             public int speed { get; set; }
             public int tyres { get; set; }
-            public Auto(string name, int speed, int tyres) : base()
+            public Vehicle(string name, int speed, int tyres) : base()
             {
                 this.name = name;
                 this.speed = speed;
                 this.tyres = tyres;
             }
-            public Auto()
+            public Vehicle()
             {
             }
             public string info()
@@ -230,11 +230,11 @@ namespace Labrat
                 return name + " max " + speed + "km/h " + tyres + ".";
             }
         }
-        public class Vehicle
+        public class Vehicleinfo
         {
             public static void Autoinfo()
             {
-                Auto theauto = new Auto();
+                Vehicle theauto = new Vehicle();
 
                 Console.Write("Mikä auto sinulla on? ");
                 theauto.name = Console.ReadLine();
@@ -249,6 +249,64 @@ namespace Labrat
                
                     Console.WriteLine(theauto.info());
                 
+
+            }
+        }
+        public class Hiustenkuivaaja
+        {
+            public bool paalla { get; set; }
+            public int lampo { get; set; }
+            public int voima { get; set; }
+            public Hiustenkuivaaja(bool paalla, int kanava, int volume) : base()
+            {
+                this.paalla = paalla;
+                this.lampo = lampo;
+                this.voima = voima;
+            }
+            public Hiustenkuivaaja()
+            {
+            }
+            public string startting()
+            {
+             return "huuuuu";
+            }
+            public string strong()
+            {                
+                return "\nHOOOO";
+            }
+
+
+        }
+        public class Hiustenkuivaajacontrol
+        {
+            public static void Controlpanel()
+            {
+                Hiustenkuivaaja kuivari = new Hiustenkuivaaja();
+                Console.Write("Käynnistetäänkö hiustenkuivaaja (y/n)? ");
+                string vastaus = Console.ReadLine();
+                if (vastaus.Substring(0, 1) == "y" || vastaus.Substring(0, 1) == "Y") kuivari.paalla = true;
+                else kuivari.paalla = false;
+                if (kuivari.paalla == true)
+                {
+                    Console.WriteLine(kuivari.startting());
+                   
+                        Console.Write("Valitse kuivauslämpö? ");
+                        kuivari.lampo = int.Parse(Console.ReadLine());
+                        Console.Write("Valitse puhaltimen kesto? ");
+                        kuivari.voima = int.Parse(Console.ReadLine());
+                        Console.Write("Valitsit lämmöksi {0} celsiusta ja kestoksi {1} sekuntia. \nPuhallin sammuttaa itsensä puhalluksen jälkeen. Paina enter jatkaaksesi. ", kuivari.lampo,kuivari.voima);
+                        Console.ReadLine();
+                        if (kuivari.voima > 0)
+                        { for ( int i = 0; i < kuivari.voima; i++)
+                        {
+                            System.Threading.Thread.Sleep(1000);
+                            Console.WriteLine(kuivari.strong());
+                        }
+                        }
+                        
+                        Console.WriteLine("\nHiustenkuivaaja on nyt sammunut.\n ");                            
+                    
+                }
 
             }
         }

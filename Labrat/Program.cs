@@ -10,7 +10,7 @@ namespace Labrat
     {
         static void Main(string[] args)
         {
-            Lab02.Vehicle.Autoinfo();
+            Lab02.Hiustenkuivaajacontrol.Controlpanel();
         }
     }
 }
