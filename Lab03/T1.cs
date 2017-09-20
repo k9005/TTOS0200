@@ -22,6 +22,8 @@ namespace Lab03
         }
         public static bool Onkopvm(string syote)
         {
+            
+
             return false;
         }
     }

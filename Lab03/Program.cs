@@ -10,8 +10,8 @@ namespace Lab03
     {
         static void Main(string[] args)
         {
-            Testaaluku();
-            //Testaapvm();
+            //Testaaluku();
+            Testaapvm();
         }
         static void Testaaluku()
         {
@@ -23,7 +23,11 @@ namespace Lab03
         }
         static void Testaapvm()
         {
-           // T1.Onkopvm(luku);
+            Console.Write("Anna paivamaara: ");
+            string luku = Console.ReadLine();
+            T1.Onkopvm(luku);
+            Console.WriteLine(T1.Onkopvm(luku));
+            Console.WriteLine(DateTime.MinValue);
         }
     }
 }
