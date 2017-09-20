@@ -20,18 +20,18 @@ namespace Labrat
                 this.kosteus = kosteus;
             }
             public Kiuas()
-            {     
+            {
             }
             public string warming()
             {
                 string tiktik = "grrrrprrr\nprrrtiktitkitktiktiktik\n";
-                    
+
                 return tiktik;
             }
             public string loyly()
             {
                 string ssh = "pshshhsshhsssshhhh";
-              
+
                 return ssh;
             }
         }
@@ -66,26 +66,26 @@ namespace Labrat
                     Console.WriteLine("Kiuas on nyt valmis käyttöön! lämpö on {0} celsiusta ja kosteus {1} prosenttia", harvia.lampo, harvia.kosteus);
                     while (harvia.paalla == true)
                     {
-                        
-                    Console.Write("Haluatko heittää löylyä (y/n)?");
-                     string vastaus = Console.ReadLine();
-                    if (vastaus.Substring(0, 1) == "y" || vastaus.Substring(0, 1) == "Y")
+
+                        Console.Write("Haluatko heittää löylyä (y/n)?");
+                        string vastaus = Console.ReadLine();
+                        if (vastaus.Substring(0, 1) == "y" || vastaus.Substring(0, 1) == "Y")
                         {
                             Console.WriteLine(harvia.loyly());
                         }
-                    
+
                         Console.Write("Haluatko lopettaa saunomisen? (y/n)?");
                         vastaus = Console.ReadLine();
                         if (vastaus.Substring(0, 1) == "y" || vastaus.Substring(0, 1) == "Y") harvia.paalla = false;
-                        
+
 
                     }
                 }
-                
-               
-                    Console.WriteLine("Kiuas on nyt sammutettu! harvia kiittää!!");
-                
-            } 
+
+
+                Console.WriteLine("Kiuas on nyt sammutettu! harvia kiittää!!");
+
+            }
         }
         public class Pesukone
         {
@@ -93,7 +93,7 @@ namespace Labrat
             public int lampo { get; set; }
             public int kovuus { get; set; }
             public bool linkous { get; set; }
-            
+
             public Pesukone(bool paalla, int lampo, int kovuus, bool linkous) : base()
             {
                 this.paalla = paalla;
@@ -131,9 +131,9 @@ namespace Labrat
                 vastaus = Console.ReadLine();
                 if (vastaus.Substring(0, 1) == "y" || vastaus.Substring(0, 1) == "Y") rosenlew.linkous = true;
                 string linko = "";
-                if (rosenlew.linkous == true) linko = "haluat linkouksen"; 
+                if (rosenlew.linkous == true) linko = "haluat linkouksen";
                 else if (rosenlew.linkous == false) linko = "et halua linkousta";
-                Console.WriteLine("Valitsit seuraavat vaihtoehdot: Lämpötila {0} celsius astetta, kovuus {1} ja {2}.",rosenlew.lampo, rosenlew.kovuus,  linko );
+                Console.WriteLine("Valitsit seuraavat vaihtoehdot: Lämpötila {0} celsius astetta, kovuus {1} ja {2}.", rosenlew.lampo, rosenlew.kovuus, linko);
                 Console.Write("Aloitetaanko ohjelma (y/n)? ");
                 vastaus = Console.ReadLine();
                 if (vastaus.Substring(0, 1) == "y" || vastaus.Substring(0, 1) == "Y")
@@ -146,10 +146,10 @@ namespace Labrat
                     }
                     Console.WriteLine("Ohjelma on valmis!");
                 }
-                
-                
-                    Console.WriteLine("Ohjelma on lopetettu. Kiitos!!");
-                
+
+
+                Console.WriteLine("Ohjelma on lopetettu. Kiitos!!");
+
 
             }
         }
@@ -208,7 +208,7 @@ namespace Labrat
                     Console.WriteLine("Telvisio sammuu, heihei!");
                     Console.WriteLine(lg.startting());
                 }
-                
+
             }
         }
         public class Vehicle
@@ -246,9 +246,9 @@ namespace Labrat
 
 
                 Console.WriteLine("Tässä tietoja autostasi: ");
-               
-                    Console.WriteLine(theauto.info());
-                
+
+                Console.WriteLine(theauto.info());
+
 
             }
         }
@@ -277,7 +277,7 @@ namespace Labrat
         }
         public class CDplayer
             {
-            public static void Controlpanel() { 
+            public static void CDlukija() { 
                 int valinta = 0;
                 int kappale = 1;
                 CD disk = new CD();
@@ -320,3 +320,4 @@ namespace Labrat
     }
         
     }
+}
