@@ -10,7 +10,7 @@ namespace Labrat
     {
         static void Main(string[] args)
         {
-            Lab02.Kiuascontrol.Controlpanel();
+            Lab02.CDplayer.Controlpanel();
         }
     }
 }
