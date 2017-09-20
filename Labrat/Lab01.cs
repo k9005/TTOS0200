@@ -85,7 +85,7 @@ namespace Labrat
             TimeSpan aika = TimeSpan.FromSeconds(secs);
             string vastaus = aika.ToString(@"hh\h\:mm\m\:ss\s");
             Console.WriteLine("Antamasi aika kivemmassa muodossa: " + vastaus);
-            Console.ReadLine();
+           
 
 
 
@@ -99,8 +99,8 @@ namespace Labrat
             kulutus = matka / 100;
             kulutus = kulutus * 7.02;
             raha = kulutus * 1.595;
-            raha = Math.Round(raha, 2);
-            Console.WriteLine("Bensaa sinulla menee {0} ja se kustantaa sinulle {1} euroa.", kulutus, raha);
+            //raha = Math.Round(raha, 2);
+            Console.WriteLine("Bensaa sinulla menee {0} ja se kustantaa sinulle {1:0.##} euroa.", kulutus, raha);
             Console.ReadLine();
 
         }
@@ -260,7 +260,7 @@ namespace Labrat
         public static void Tehtava15()
         {
             int kerros;
-            int merkki = 1;
+            
             Console.Write("Kuinka korkean puun haluat: ");
             kerros = int.Parse(Console.ReadLine());
             for (int i = 0; i < kerros - 2; i++)
