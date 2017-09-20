@@ -277,7 +277,7 @@ namespace Labrat
         }
         public class CDplayer
             {
-            public static void CDlukija() { 
+            public static void Controlpanel() { 
                 int valinta = 0;
                 int kappale = 1;
                 CD disk = new CD();
