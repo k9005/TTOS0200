@@ -11,9 +11,9 @@ namespace Lab03
         static void Main(string[] args)
         {
             //Testaaluku();
-            //Testaapvm();
+            Testaapvm();
             //Hissiconsole();
-            Volumeconsole();
+            //Volumeconsole();
         }
         static void Testaaluku()
         {
@@ -29,7 +29,7 @@ namespace Lab03
             string luku = Console.ReadLine();
             T1.Onkopvm(luku);
             Console.WriteLine(T1.Onkopvm(luku));
-            Console.WriteLine(DateTime.Today);
+            
         }
         static void Hissiconsole()
        {

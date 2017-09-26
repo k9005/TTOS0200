@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Lab03
 {
     public static class T1
@@ -21,14 +22,21 @@ namespace Lab03
                     else return true;
                 }
             }
-
             return false;
         }
+
         public static bool Onkopvm(string syote)
         {
-            
-
-            return false;
+            string format = "dd MM yyyy";
+            DateTime dateTime;
+            if (DateTime.TryParse(syote, format, out dateTime))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 
