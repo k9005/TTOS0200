@@ -11,7 +11,9 @@ namespace Lab03
         static void Main(string[] args)
         {
             //Testaaluku();
-            Testaapvm();
+            //Testaapvm();
+            //Hissiconsole();
+            Volumeconsole();
         }
         static void Testaaluku()
         {
@@ -27,7 +29,30 @@ namespace Lab03
             string luku = Console.ReadLine();
             T1.Onkopvm(luku);
             Console.WriteLine(T1.Onkopvm(luku));
-            Console.WriteLine(DateTime.MinValue);
+            Console.WriteLine(DateTime.Today);
+        }
+        static void Hissiconsole()
+       {
+            T2 hissi = new T2();
+
+            while (true)
+            {
+                Console.Write("Mihin kerrokseen haluat mennä? ");
+                hissi.Kerros = int.Parse(Console.ReadLine());
+                Console.WriteLine("olet kerroksessa: " + hissi.Kerros);
+            }
+        }
+        static void Volumeconsole()
+        {
+            T3 kajari = new T3();
+
+            while (true)
+            {
+                Console.Write("Säädä volume haluaamasi kovuudelle: ");
+                kajari.Volume = int.Parse(Console.ReadLine());
+                Console.WriteLine("Volume on nyt: " + kajari.Volume);
+            }
         }
     }
+    
 }
