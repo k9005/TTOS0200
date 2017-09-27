@@ -11,7 +11,7 @@ namespace Lab04
         public string Name { get; set; }
         public string Model { get; set; }
         public int Modelyear { get; set; }
-        public String Color { get; set; }
+        public string Color { get; set; }
                 
         public Vehicle()
         {
@@ -28,7 +28,7 @@ namespace Lab04
         
         public override string ToString()
         {
-            return "Name: "+ Name + " Model: " + Model + " Model year: " + Modelyear + " Color: " + Color;
+            return "Name: "+ Name + " | Model: " + Model + " | Model year: " + Modelyear + " | Color: " + Color;
         }
     }
     
@@ -46,11 +46,16 @@ namespace Lab04
         {
             Gears = gears;
             Gearname = gearname;
-        }                 
-                       
+        }
+
+        public Bike(string name, string model, int modelyear, string color)
+            : base(name,model,modelyear,color)
+        { }
+                     
         public override string ToString()
         {
-            return base.ToString() + " Gears: " + Gears + "Gear name: " + Gearname;
+           if(Gears == true) return base.ToString() + " | Gears: " + Gears + " | Gear name: " + Gearname;
+           else return base.ToString();
         }
     }
     

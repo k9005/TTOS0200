@@ -8,7 +8,7 @@ namespace Lab04
 {
     class Program
     {
-        static void Main(string[] args)
+        static void work(string[] args)
         {            
             Employee employee = new Employee();
             employee.FirstName = "Esa";
@@ -24,12 +24,35 @@ namespace Lab04
             boss.Salary = 10000;
             boss.Car = "Mercedes-Benz";
             boss.Bonus = 1000000;            
-            Console.WriteLine(boss.ToString());
+            Console.WriteLine(boss.ToString());     
+          
+        }
 
-            
-            
-            
-            
+        static void Main(string[] args)
+        {
+            Bike bike = new Bike();
+            bike.Name = "Harley Davidson";
+            bike.Model = "Roamer";
+            bike.Modelyear = 1999;
+            bike.Color = "Grey";
+            bike.Gears = true;
+            bike.Gearname = "Matslock";
+            Console.WriteLine(bike.ToString());
+
+            Bike bike2 = new Bike("Kawasaki", "Ninja",2001,"Green");
+            Console.WriteLine(bike2.ToString());
+
+            Boat boat = new Boat();
+            boat.Name = "";
+            boat.Model = "";
+            boat.Modelyear = 1988;
+            boat.Color = "";
+            boat.Seats = 3;
+            boat.BoatType = "";
+            Console.WriteLine(boat.ToString());
+
+           
+
         }
     }
 }
