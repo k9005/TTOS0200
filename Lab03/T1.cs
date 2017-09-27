@@ -27,9 +27,9 @@ namespace Lab03
 
         public static bool Onkopvm(string syote)
         {
-            string format = "dd MM yyyy";
+            string format = "dd.MM.yyyy" ;
             DateTime dateTime;
-            if (DateTime.TryParse(syote, format, out dateTime))
+            if (DateTime.TryParseExact(syote, format,System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out dateTime))
             {
                 return true;
             }
