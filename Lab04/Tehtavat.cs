@@ -23,11 +23,6 @@ namespace Lab04
             FirstName = firstName;
             LastName = lastName;
         }
-        public void EmployeeMethod()
-        {
-            Console.WriteLine("This method belongs to Employee!");
-        }
-
         
         public override string ToString()
         {
@@ -47,13 +42,8 @@ namespace Lab04
             : base(firstName, lastName)
         {
             Car = car;
-        }
-                 
-        public void BossMethod()
-        {
-            Console.WriteLine("This method belongs to Boss!");
-        }
-                
+        }                 
+                       
         public override string ToString()
         {
             return base.ToString() + " Car: " + Car + "Bonus: " + Bonus+ "$";
