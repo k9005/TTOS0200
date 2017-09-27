@@ -11,9 +11,9 @@ namespace Lab03
         static void Main(string[] args)
         {
             //Testaaluku();
-            Testaapvm();
+            //Testaapvm();
             //Hissiconsole();
-            //Volumeconsole();
+            Volumeconsole();
         }
         static void Testaaluku()
         {

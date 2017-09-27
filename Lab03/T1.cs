@@ -68,7 +68,7 @@ namespace Lab03
     {
         private readonly int Maxk = 100;
         private readonly int Mink = 0;
-        int volume = 1;
+        private int volume = 1;
         public int Volume
         {
             get
@@ -79,13 +79,12 @@ namespace Lab03
             {
                 if (value <= Maxk && value >= Mink) volume = value;
                 else if (value < Mink)
-                { volume = 0;
-                    Console.WriteLine("Laitoit liian pienen arvon! Volume on asetettu {0}", volume);
+                {
+                    volume = 0;                    
                 }
                 else if (value > Maxk)
                 {
-                    volume = 100;
-                    Console.WriteLine("Laitoit liian suuren arvon! Volume on asetettu {0}", volume);
+                    volume = 100;                    
                 }
                 
 
