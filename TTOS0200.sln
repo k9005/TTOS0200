@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kuivaaja", "Kuivaaja\Kuivaa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab03", "Lab03\Lab03.csproj", "{D4957DB1-2B3D-48CC-AC29-2DF4D9E0FDED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab04", "Lab04\Lab04.csproj", "{F56ADBC8-7157-4514-8EB2-0FD991415956}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{D4957DB1-2B3D-48CC-AC29-2DF4D9E0FDED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4957DB1-2B3D-48CC-AC29-2DF4D9E0FDED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4957DB1-2B3D-48CC-AC29-2DF4D9E0FDED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F56ADBC8-7157-4514-8EB2-0FD991415956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F56ADBC8-7157-4514-8EB2-0FD991415956}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F56ADBC8-7157-4514-8EB2-0FD991415956}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F56ADBC8-7157-4514-8EB2-0FD991415956}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
