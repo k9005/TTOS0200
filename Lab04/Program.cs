@@ -13,12 +13,14 @@ namespace Lab04
             Employee employee = new Employee();
             employee.FirstName = "Esa";
             employee.LastName = "Nahka";
+            employee.Profession = "Sweeper";
             employee.Salary = 1200;            
             Console.WriteLine(employee.ToString());
                        
             Boss boss = new Boss();
             boss.FirstName = "Tero";
             boss.LastName = "Nuppi";
+            boss.Profession = "Yeller";
             boss.Salary = 10000;
             boss.Car = "Mercedes-Benz";
             boss.Bonus = 1000000;            
