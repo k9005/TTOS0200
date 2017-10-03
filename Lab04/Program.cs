@@ -28,7 +28,7 @@ namespace Lab04
           
         }
 
-        static void Main(string[] args)
+        static void Mmain(string[] args)
         {
             Bike bike = new Bike();
             bike.Name = "Harley Davidson";
@@ -54,5 +54,69 @@ namespace Lab04
            
 
         }
+
+        static void Msain(string[] args)
+        {
+            
+            T6 radio = new T6();
+
+            while (true)
+            {
+                Console.Write("Aseta Radio päälle antamalla 1 : ");
+                if (radio.Käynnistys(int.Parse(Console.ReadLine())))
+                {
+                    Console.WriteLine("Radio on päällä");
+                    Console.Write("Säädä volumea väliltä (0-9): ");
+                    if (radio.Säädävolumea(int.Parse(Console.ReadLine())))
+                    {
+                        Console.WriteLine("Volume on: " + radio.volume);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Arvo ei kelvannut..");
+                        Console.WriteLine("Volume: " + radio.volume);
+                    }
+                    Console.Write("Anna taajuus väliltä 2000.0-26000.0: ");
+                    if (radio.Säädätaajuus(Convert.ToDouble(Console.ReadLine())))
+                    {
+                        Console.WriteLine("Taajuus on nyt: " + radio.tune);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Taajuus ei ole valittavissa.");
+                        Console.WriteLine("Taajuus: " + radio.tune);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Radio on sammutettu.");
+                }
+            }
+        }
+
+        static void Masin(string[] args)
+        {
+            
+            DVD levy = new DVD("Dokumentti", "Ihmeellinen maailma", 129, "Jack Black");
+            Book kirja = new Book("Kauhu", "Harri potteri", 787, "Wk. Rowling");
+
+           
+
+            Console.WriteLine(levy.ToString());
+            Console.WriteLine(kirja.ToString());
+        }
+
+        static void Main(string[] args)
+        {
+
+            NHL capitals = new NHL("Washington Capitals",6, 3, 3, 9);
+            Liiga saipa = new Liiga("Saipa", 8, 2, 6, 6);
+
+
+
+            Console.WriteLine(capitals.ToString());
+            Console.WriteLine(saipa.ToString());
+        }
     }
+
 }
