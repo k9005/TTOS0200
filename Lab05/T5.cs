@@ -6,41 +6,41 @@ using System.Threading.Tasks;
 
 namespace Lab05
 {
-    class Vaate
+    class Fruit
     {
         public string Nimi { get; set; }
         public string Sijainti { get; set; }
-        public string Kenen { get; set; }
+        public string Merkki { get; set; }
 
-        public Vaate()
+        public Fruit()
         {
         }
-        public Vaate(string nimi, string sijainti, string kenen)
+        public Fruit(string nimi, string sijainti, string merkki)
         {
             Nimi = nimi;
             Sijainti = sijainti;
-            Kenen = kenen;
+            Merkki = merkki;
         }
         public override string ToString()
         {
-            return Nimi + " on paikassa " + Sijainti + " ja kuuluu: " + Kenen;
+            return Nimi + " löytyy kohdasta " + Sijainti + " ja on merkiltään " + Merkki +".";
         }
     }
-    class Vaatekaappi
+    class Hyllyt
     {
         public string Name { get; set; }
-        public List<Vaate> sisältö;
-        //Constructor
-        public Vaatekaappi()
+        public List<Fruit> sisältö;
+        
+        public Hyllyt()
         {
-            sisältö = new List<Vaate>();
+            sisältö = new List<Fruit>();
 
         }
-        //Ylikirjoitetaan Tostring
+        
         public override string ToString()
         {
             string retval = Name + " sisältö\n";
-            foreach (Vaate item in sisältö)
+            foreach (Fruit item in sisältö)
             {
                 retval += item.ToString() + "\n";
             }
