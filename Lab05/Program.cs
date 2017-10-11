@@ -8,7 +8,7 @@ namespace Lab05
 {
     class Program
     {
-        /* static void Main(string[] args)
+         static void Main(string[] args)
          {
              Vehicle auto = new Vehicle();
              auto.Nimi = "Merkki";
@@ -85,46 +85,38 @@ namespace Lab05
                  Console.WriteLine("Luuseri");
              }
 
-         }*/
-        /* static void Main4(string[] args)
+         }
+         static void Main4(string[] args)
          {
-             Aikuinen Mies = new Aikuinen();
-             Mies.Nimi = "Mikko";
-             Mies.Ikä = 24;
-             Mies.Pituus = 197;
-             Mies.Paino = 120;
-             Mies.Auto = "Audi";
+             Human Man = new Human();
+             Man.Nimi = "Matt";
+             Man.Age = 55;
+             Man.Pituus = 150;
+             Man.Paino = 120;
+             
              Console.WriteLine(Mies.ToString());
-             Mies.Kasvu();
-             Mies.Liiku();
-             Mies.Kasvu();
-             Mies.Liiku();
-             Console.WriteLine("Miehen ikä:" + Mies.Ikä);
+             Mies.Ageing();
+             Mies.Move();
+             Mies.Ageing();
+             Mies.Move();
+             Console.WriteLine("Miehen ikä:" + Mies.Age);
 
-             Lapsi Vauva = new Lapsi();
-             Vauva.Nimi = "Esa";
-             Vauva.Ikä = 2;
-             Vauva.Pituus = 60;
-             Vauva.Paino = 15;
-             Vauva.Vaippa = "LÖytyyy";
+             Kid Baby = new Kid();
+             Baby.Nimi = "Erkka";
+             Baby.Age = 1;
+             Baby.Pituus = 43;
+             Baby.Paino = 12;
+            
              Console.WriteLine(Vauva.ToString());
-             Vauva.Kasvu();
-             Vauva.Kasvu();
-             Vauva.Liiku();
-             Vauva.Liiku();
-             Console.WriteLine("Vauvan ikä:" + Vauva.Ikä);
+             Baby.Ageing();
+             Baby.Ageing();
+             Baby.Move();
+             Baby.Move();
+             Console.WriteLine("Vauvan ikä:" + Vauva.Age);
 
-             Ihminen Joku = new Ihminen();
-             Joku.Nimi = "Unknown";
-             Joku.Ikä = 27;
-             Joku.Pituus = 180;
-             Joku.Paino = 75;
-             Console.WriteLine(Joku.ToString());
-             Joku.Liiku();
-             Joku.Liiku();
+     
 
-
-         }*/
+         }
          static void Main(string[] args)
          {
              Hyllyt Kauppa = new Hyllyt();

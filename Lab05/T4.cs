@@ -6,43 +6,43 @@ using System.Threading.Tasks;
 
 namespace Lab05
 {
-    class Ihminen : Nisakas
+    class Human : Mammal
     {
         public string Nimi { get; set; }
         public int Paino { get; set; }
         public int Pituus { get; set; }
 
-        public override void Liiku()
+        public override void Move()
         {
-            Console.WriteLine("Liikettä");
+            Console.WriteLine("Kävelee");
         }
-        public void Kasvu()
+        public void Ageing()
         {
-            Ikä++;
+            Age++;
         }
         public override string ToString()
         {
             return "Nimi:" + Nimi + " Paino:" + Paino + " Pituus:" + Pituus;
         }
     }
-    class Lapsi : Ihminen
+    class Kid : Ihminen
     {
-        public string Vaippa { get; set; }
+        public string Baby { get; set; }
 
-        public override void Liiku()
+        public override void Move()
         {
-            Console.WriteLine("Konttaan");
+            Console.WriteLine("Ryömii");
         }
         public override string ToString()
         {
-            return "Lapsi: " + Nimi + " Ikä:" + Ikä + " Pituus: " + Pituus + " Paino:" + Paino + " Vaippa(?)" + Vaippa;
+            return "Lapsi: " + Nimi + " Ikä:" + Ikä + " Pituus: " + Pituus + " Paino:" + Paino;
         }
     }
-    abstract class Nisakas
+    abstract class Mammal
     {
-        public int Ikä { get; set; }
+        public int Age { get; set; }
 
-        public Nisakas()
+        public Mammal()
         {
 
         }
