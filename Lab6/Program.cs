@@ -44,6 +44,40 @@ namespace JAMK.IT.MiniASIO
             {
                 Console.WriteLine(o.ToString());
             }
+            //Uuden opiskelijan lisääminen, samalla tarkastetaan ettei asioID ole jo olemassa
+            Console.Write("Anna uuden Opiskelijan asioID: ");
+            string asioid = Console.ReadLine();
+            //Id check
+            bool lippu = false;
+            foreach (Opiskelija o in opiskelijat)
+            {
+                if (asioid == o.AsioID)
+                {
+                    lippu = true;
+                    break;
+                }
+            }
+            if (lippu)
+            {
+                Console.WriteLine("AsioID {0} on jo käytössä", asioid);
+            }
+            else
+            {
+                Console.Write("Anna uuden opiskelija etunimi: ");
+                string etunimi = Console.ReadLine();
+                Console.Write("Anna uuden opiskelija sukunimi: ");
+                string sukunimi = Console.ReadLine();
+                Console.Write("Anna uuden opiskelija ryhmä: ");
+                string ryhma = Console.ReadLine();
+                //Luodaan uusi opiskelija olio
+                Opiskelija uusi = new Opiskelija(etunimi, sukunimi, ryhma);
+                opiskelijat.Add(uusi);
+                Console.WriteLine("MiniASIOn kaikki opiskelijat: ");
+                foreach (var o in opiskelijat)
+                {
+                    Console.WriteLine(o.ToString());
+                }
+            }
         }
 
 
