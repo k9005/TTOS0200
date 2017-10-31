@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{01CD6480-B9D5-48C3-918B-C7A8EC532C55}</ProjectGuid>
+    <ProjectGuid>{BAA5FFF6-451F-4BD8-9484-1B758A981581}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Lab06</RootNamespace>
-    <AssemblyName>Lab06</AssemblyName>
+    <RootNamespace>Lab08</RootNamespace>
+    <AssemblyName>Lab08</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,11 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="T3.cs" />
-    <Compile Include="T2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="T4.cs" />
+    <Compile Include="tvshows.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
