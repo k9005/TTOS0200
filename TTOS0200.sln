@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoLaskin", "DemoLaskin\De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoLaskinTests", "DemoLaskinTests\DemoLaskinTests.csproj", "{4108FEC1-CC8B-42C1-BD81-5CB301B90A1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDemo", "WpfDemo\WpfDemo.csproj", "{BCE97170-D59E-4F4C-9604-1C5186CA4F7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{4108FEC1-CC8B-42C1-BD81-5CB301B90A1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4108FEC1-CC8B-42C1-BD81-5CB301B90A1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4108FEC1-CC8B-42C1-BD81-5CB301B90A1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCE97170-D59E-4F4C-9604-1C5186CA4F7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCE97170-D59E-4F4C-9604-1C5186CA4F7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCE97170-D59E-4F4C-9604-1C5186CA4F7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCE97170-D59E-4F4C-9604-1C5186CA4F7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
