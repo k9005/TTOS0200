@@ -20,6 +20,11 @@
         <TextBox x:Name="lasinpinta_ala" HorizontalAlignment="Left" Height="23" Margin="374,181,0,0" TextWrapping="Wrap" Text="pinta-ala" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="karminpiiri" HorizontalAlignment="Left" Height="23" Margin="374,218,0,0" TextWrapping="Wrap" Text="piiri" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="laske" Content="Laske" HorizontalAlignment="Left" Margin="374,121,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Rectangle x:Name="ruskeaneliö" Fill="SaddleBrown" HorizontalAlignment="Center" Height="100" Margin="90,59,307,140" Stroke="SaddleBrown" VerticalAlignment="Center" Width="100"/>
+        <Rectangle x:Name="neliö" Fill="Azure" HorizontalAlignment="Center" Height="120" Margin="90,59,307,140" Stroke="Azure" VerticalAlignment="Center" Width="120"/>
+        
+
+
 
     </Grid>
 </Window>

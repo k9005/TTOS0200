@@ -29,12 +29,37 @@ namespace Lab_10._3
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            double ala = double.Parse(ikkunanleveys.Text) * double.Parse(ikkunankorkeus.Text);
-            ikkunanpinta_ala.Text = ala.ToString()+"cm^2";            
-            double lasiala = (double.Parse(ikkunanleveys.Text) - double.Parse(karminleveys.Text)*2) * (double.Parse(ikkunankorkeus.Text) - double.Parse(karminleveys.Text)*2);
-            lasinpinta_ala.Text = lasiala.ToString()+"cm^2";
-            double piiri = ((double.Parse(ikkunanleveys.Text) - double.Parse(karminleveys.Text) * 2)*2) + ((double.Parse(ikkunankorkeus.Text) - double.Parse(karminleveys.Text) * 2)*2);
-            karminpiiri.Text = piiri.ToString() + "cm";
+            double number = 0;
+            if (!double.TryParse(ikkunankorkeus.Text, out number)) { }
+            else if (!double.TryParse(ikkunanleveys.Text, out number)) { }
+            else if (!double.TryParse(karminleveys.Text, out number)) { }
+
+
+
+            else
+            {
+
+                if (30 < double.Parse(ikkunankorkeus.Text) || double.Parse(ikkunankorkeus.Text) > 300 && 30 < double.Parse(ikkunanleveys.Text) || double.Parse(ikkunanleveys.Text) > 300)
+                {
+                    double ala = double.Parse(ikkunanleveys.Text) * double.Parse(ikkunankorkeus.Text);
+                    ikkunanpinta_ala.Text = ala.ToString() + "cm^2";
+                    double lasiala = (double.Parse(ikkunanleveys.Text) - double.Parse(karminleveys.Text) * 2) * (double.Parse(ikkunankorkeus.Text) - double.Parse(karminleveys.Text) * 2);
+                    lasinpinta_ala.Text = lasiala.ToString() + "cm^2";
+                    double piiri = ((double.Parse(ikkunanleveys.Text) - double.Parse(karminleveys.Text) * 2) * 2) + ((double.Parse(ikkunankorkeus.Text) - double.Parse(karminleveys.Text) * 2) * 2);
+                    karminpiiri.Text = piiri.ToString() + "cm";
+                    neliö.Width = double.Parse(ikkunanleveys.Text) - double.Parse(karminleveys.Text);
+                    neliö.Height = double.Parse(ikkunankorkeus.Text) - double.Parse(karminleveys.Text);
+                    ruskeaneliö.Width = double.Parse(ikkunanleveys.Text);
+                    ruskeaneliö.Height = double.Parse(ikkunankorkeus.Text);
+                }
+                else
+                {
+                    ikkunankorkeus.Text = "arvot oltava väliltä 30-300";
+                    ikkunanleveys.Text = "arvot oltava väliltä 30-300";
+
+                }
+                
+            }
         }
     }
 }
