@@ -14,13 +14,13 @@
         <TextBox x:Name="Amount1" HorizontalAlignment="Left" Height="22" Margin="163,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66" RenderTransformOrigin="0.147,-0.071" TextChanged="Amount1_TextChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="21,85,0,0" TextWrapping="Wrap" Text="Ostan" VerticalAlignment="Top" FontWeight="Bold"/>
         <ComboBox x:Name="Combo2" HorizontalAlignment="Left" Margin="250,101,0,0" VerticalAlignment="Top" Width="142" Text="Valitse valuutta" SelectionChanged="Combo2_SelectionChanged">
-            <ListBoxItem Content="Euro"/>
-            <ListBoxItem Content="Yhdysvallat USD"/>
+            <ListBoxItem x:Name="euro" Content="Euro"/>
+            <ListBoxItem x:Name="usd" Content="Yhdysvallat USD"/>
         </ComboBox>
         <TextBox x:Name="Amount2" HorizontalAlignment="Left" Height="22" Margin="392,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66" RenderTransformOrigin="0.147,-0.071" TextChanged="Amount2_TextChanged"/>
-        <TextBlock x:Name="txtblo2" HorizontalAlignment="Left" Margin="250,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.62,-1.22" Width="137" FontSize="9"><Run FontWeight="Bold" Text="100 EUR "/><Run Text="Vastaa  "/><Run FontWeight="Bold" Text="111,15 USD"/></TextBlock>
+        <TextBlock x:Name="txtblo2" HorizontalAlignment="Left" Margin="250,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.62,-1.22" Width="137" FontSize="9"><Run FontWeight="Bold" Text="100 EUR "/><Run Text="Vastaa  "/><Run FontWeight="Bold" Text="11"/><Run FontWeight="Bold" Text="0"/><Run FontWeight="Bold" Text=","/><Run FontWeight="Bold" Text="3"/><Run FontWeight="Bold" Text=" USD"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="250,85,0,0" TextWrapping="Wrap" Text="Maksan" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="88,122,0,0" TextWrapping="Wrap" Text="Kurssi: " VerticalAlignment="Top" Width="81"/>
+        <TextBlock x:Name="txtblo1" HorizontalAlignment="Left" Margin="88,122,0,0" TextWrapping="Wrap" Text="Kurssi: " VerticalAlignment="Top" Width="81"/>
 
     </Grid>
 </Window>
