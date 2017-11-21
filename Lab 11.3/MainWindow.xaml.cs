@@ -33,20 +33,30 @@ namespace Lab_11._3
 
         private void arvonta_Click(object sender, RoutedEventArgs e)
         {
+            List<string> lines = new List<string>();
             int[] lottoNumbers = new int[7];
-            Random rand = new Random();
-            for (int i = 0; i < lottoNumbers.Length; i++)
-             {
-                    
-                    int number = rand.Next(1, 41);
-                    lottoNumbers[i] = number;
-              
-             }
-                    
+            int number;
+            int luku;
+            if (rivit.Text.Length > 0 & rivit.Text != "0" & int.TryParse(rivit.Text, out luku))
+            {
                 
+            }
+            Random rand = new Random();
+            for (int a = 0; a < luku; a++)
+            {
+                for (int i = 0; i < lottoNumbers.Length; i++)
+                {
+                    do
+                    {
+                        number = rand.Next(1, 41);
+                    }
+                    while (lottoNumbers.Contains(number));
+                    lottoNumbers[i] = number;
+                }
+            }
             
-            tuloste.Text = String.Join(" ", lottoNumbers.Select(p => p.ToString()).ToArray());
-
+            lines.Add( String.Join(" ", lottoNumbers.Select(p => p.ToString()).ToArray()));
+            tuloste.Text = String.Join(Environment.NewLine, lines);
 
 
 
