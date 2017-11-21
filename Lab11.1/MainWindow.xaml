@@ -3,19 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:VK46Autotalli"
+        xmlns:local="clr-namespace:Lab11._1"
         mc:Ignorable="d"
-        Title="Esa's Autotalli" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <!-- ulompi stackpanel, elementit päällekkäin pinossa -->
-        <StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Button x:Name="btnHaeAutot" Content="Hae autot" Margin="5" Click="btnHaeAutot_Click" />
-                <Button x:Name="btnHaeAudit" Content="Hae Audit" Margin="5" Click="btnHaeAudit_Click" />
-                <ComboBox x:Name="cmbAutot" Margin="5" SelectionChanged="cmbAutot_SelectionChanged" />
-            </StackPanel>
-            <DataGrid x:Name="dgAutot" SelectionChanged="dgAutot_SelectionChanged"></DataGrid>
-            <Image x:Name="imgAuto"></Image>
-        </StackPanel>
+        <CheckBox x:Name="box1" Content="Maito" HorizontalAlignment="Left" Margin="212,33,0,0" VerticalAlignment="Top" />
+        <CheckBox x:Name="box2" Content="Leipä" HorizontalAlignment="Left" Margin="212,53,0,0" VerticalAlignment="Top" />
+        <CheckBox x:Name="box3" Content="Kalja" HorizontalAlignment="Left" Margin="212,73,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="box4" Content="Makkara" HorizontalAlignment="Left" Margin="212,92,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="box5" Content="Raparperi" HorizontalAlignment="Left" Margin="212,112,0,0" VerticalAlignment="Top"/>
+        <Button Content="Osta" HorizontalAlignment="Left" Margin="185,132,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="161,158,0,0" TextWrapping="Wrap" Text="Ostoslista:" VerticalAlignment="Top"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="100" Margin="161,179,0,0" Stroke="Black" VerticalAlignment="Top" Width="183"/>
+        <TextBlock x:Name="ostoslista" HorizontalAlignment="Left" Margin="161,179,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
     </Grid>
 </Window>

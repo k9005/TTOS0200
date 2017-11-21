@@ -20,82 +20,41 @@ namespace Lab11._1
     /// </summary>
     public partial class MainWindow : Window
     {
-        private List<Auto> autot; //muuttuja on käytettävissä kaikissa luokan metodeissa ja tapahtumankäsittelijöissä
-        private const string polku = @"d:\\kuvat\\";
+
         public MainWindow()
         {
-            //tänne koodi joka suoritetaan ikkunan avauksen luonnissa
+
             InitializeComponent();
-            //pyydetään BL-kerrokselta autot, ja näytetään ne käyttäjälle
-            autot = Autotalli.HaeAutot();
-            NaytaKuva("autotalli.png");
-            //asetetaan comboboxiin kaikki eri automerkit
-            //VE1: käsin koodaamalla
-            List<string> merkit = new List<string>();
-            merkit.Add("Audi");
-            merkit.Add("Saab");
-            merkit.Add("Volvo");
-            //VE2: parempi kysytään LINQ:lla datasta eri automerkit
-            var result = autot.Select(m => m.Merkki).Distinct();
-            cmbAutot.ItemsSource = result;
+
+
         }
 
-        private void btnHaeAutot_Click(object sender, RoutedEventArgs e)
-        {
-            NaytaKuva("autotalli.png");
-            dgAutot.ItemsSource = autot;
-        }
 
-        private void NaytaKuva(string url)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if ((bool)box1.IsChecked)
             {
-                if (string.IsNullOrEmpty(url))
-                {
-                    url = "puuttuu.png";
-                }
-                //lisätään kuvatiedostojen vakiopolku
-                url = polku + url;
-                //kuvan näyttö
-                BitmapImage pic = new BitmapImage();
-                pic.BeginInit();
-                pic.UriSource = new Uri(url);
-                pic.EndInit();
-                imgAuto.Stretch = Stretch.Fill;
-                imgAuto.Source = pic;
+                ostoslista.Text = "Maito\n";
             }
-            catch (Exception ex)
+            if ((bool)box2.IsChecked)
             {
-                MessageBox.Show(ex.Message);
+                ostoslista.Text = ostoslista.Text + "leipä\n";
+            }
+            if ((bool)box3.IsChecked)
+            {
+                ostoslista.Text = ostoslista.Text + "Kalja\n";
+            }
+            if ((bool)box4.IsChecked)
+            {
+                ostoslista.Text = ostoslista.Text + "Makkara\n";
+            }
+            if ((bool)box5.IsChecked)
+            {
+                ostoslista.Text = ostoslista.Text + "Raparperi\n";
             }
         }
 
-        private void dgAutot_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            //huom, olemme itse populoineet DataGridin Auto-olioilla, joten kukin DataGridin jäsen/alkio on itseasiassa Auto-olio
-            //FAQ: onko Object == object tai String == string
-            Object obj = dgAutot.SelectedItem;
-            if (obj != null)
-            {
-                Auto valittu = (Auto)obj;
-                NaytaKuva(valittu.URL);
-            }
-        }
-
-        private void btnHaeAudit_Click(object sender, RoutedEventArgs e)
-        {
-            //näkyviin pelkästään Audi-merkkiset autot
-            var result = autot.Where(m => m.Merkki.Contains("Audi"));
-            dgAutot.ItemsSource = result;
-        }
-
-        private void cmbAutot_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            //suodatetaan DataGridiin näkyviin vain valittu automerkki
-            string merkki = cmbAutot.SelectedValue.ToString();
-            var result = autot.Where(m => m.Merkki.Contains(merkki));
-            dgAutot.ItemsSource = result;
-            NaytaKuva("autotalli.png");
-        }
+       
     }
+
 }
