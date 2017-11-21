@@ -24,5 +24,32 @@ namespace Lab_11._3
         {
             InitializeComponent();
         }
+       
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void arvonta_Click(object sender, RoutedEventArgs e)
+        {
+            int[] lottoNumbers = new int[7];
+            Random rand = new Random();
+            for (int i = 0; i < lottoNumbers.Length; i++)
+             {
+                    
+                    int number = rand.Next(1, 41);
+                    lottoNumbers[i] = number;
+              
+             }
+                    
+                
+            
+            tuloste.Text = String.Join(" ", lottoNumbers.Select(p => p.ToString()).ToArray());
+
+
+
+
+        }
     }
 }
