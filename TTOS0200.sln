@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello", "Hello\Hello.csproj", "{43D3A9D9-D831-46CD-BE33-1DE6770DB406}"
 EndProject
@@ -44,6 +44,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab11.4", "Lab11.4\Lab11.4.csproj", "{3B6BBF6D-9F4A-46E7-BDB1-50065E165808}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab11.1", "Lab11.1\Lab11.1.csproj", "{21398E26-B58D-41EC-A867-4A2B16F266ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMK", "AMK\AMK.csproj", "{B8EBD90E-8D7B-4B75-84D2-F86F887FB679}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -135,6 +137,10 @@ Global
 		{21398E26-B58D-41EC-A867-4A2B16F266ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21398E26-B58D-41EC-A867-4A2B16F266ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21398E26-B58D-41EC-A867-4A2B16F266ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8EBD90E-8D7B-4B75-84D2-F86F887FB679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8EBD90E-8D7B-4B75-84D2-F86F887FB679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8EBD90E-8D7B-4B75-84D2-F86F887FB679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8EBD90E-8D7B-4B75-84D2-F86F887FB679}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
