@@ -12,54 +12,56 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFLottery;
 
-namespace Lab_11._3
+namespace WPFLottery
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// Lotto: arvotaan 7 numeroa väliltä 1-40
+    /// Viking Lotto: arvotaan 6 numeroa 1-48
+    ///Eurojackpot: arvotaan 5 numeroa 1-50 ja ja 2 tähtinumeroa väliltä 1-10
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+            InitializeGames();
         }
-       
-
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void InitializeGames()
         {
-
+            Game.Items.Add(new Lotto());
+            Game.Items.Add(new Vikinglotto());
+            Game.Items.Add(new Eurojackpot());
         }
-
-        private void arvonta_Click(object sender, RoutedEventArgs e)
+        private void DrawBtn_Click(object sender, RoutedEventArgs e)
         {
-            List<string> lines = new List<string>();
-            int[] lottoNumbers = new int[7];
-            int number;
-            int luku;
-            if (rivit.Text.Length > 0 & rivit.Text != "0" & int.TryParse(rivit.Text, out luku))
+            try
             {
-                
-            }
-            Random rand = new Random();
-            for (int a = 0; a < luku; a++)
-            {
-                for (int i = 0; i < lottoNumbers.Length; i++)
+                if (Game.SelectedIndex >= 0)
                 {
-                    do
+                    Lottery game = (Lottery)Game.SelectedItem;
+                    Results.Text = "";
+                    int number = int.Parse(DrawAmt.Text);
+                    for (int x = 0; x < number; x++)
                     {
-                        number = rand.Next(1, 41);
+                        game.Generate();
+                        Results.Text += String.Format("Rivi {0}: ", x + 1) + game.LineToString() + "\n";
+                        game.Numbers.Clear();
                     }
-                    while (lottoNumbers.Contains(number));
-                    lottoNumbers[i] = number;
                 }
             }
-            
-            lines.Add( String.Join(" ", lottoNumbers.Select(p => p.ToString()).ToArray()));
-            tuloste.Text = String.Join(Environment.NewLine, lines);
-
-
-
+            catch (Exception)
+            {
+                Results.Text += "Please enter the amount of lines";
+            }
+        }
+        private void ClearBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Results.Text = String.Empty;
+            DrawAmt.Text = String.Empty;
+            Game.SelectedIndex = -1;
         }
     }
 }
