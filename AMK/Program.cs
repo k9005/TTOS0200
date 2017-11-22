@@ -11,61 +11,47 @@ namespace AMK
 
         static void Main(string[] args)
         {
-            Opintojakso Opint1 = new Opintojakso("Olio");
+            Opintojakso Op1 = new Opintojakso("Olio");
 
-            Opint1.Oppilas.Add(new Opiskelija("Kalle Koskinen","Q203", 18));
-            Opint1.Oppilas.Add(new Opiskelija("Olli Koskinen","asds", 18));
-            Opint1.Oppilas.Add(new Opiskelija("Pekka Jormakka","", 18));
-            Opint1.Opettaja.Add(new Opettaja("Arja koriseva","", 59));
+            Op1.Oppilas.Add(new Opiskelija("Kalle Koskinen","Q203", 18));
+            Op1.Oppilas.Add(new Opiskelija("Olli Koskinen","asds", 18));
+            Op1.Oppilas.Add(new Opiskelija("Pekka Jormakka","", 18));
+            Op1.Opettaja.Add(new Opettaja("Arja koriseva","", 59));
             
 
-            Opintojakso Opint2 = new Opintojakso("Kertaus");
+            Opintojakso Op2 = new Opintojakso("Kertaus");
 
-            Opint2.Oppilas.Add(new Opiskelija("Kalle Koskinen", "Q203", 18));
-            Opint2.Oppilas.Add(new Opiskelija("Olli Koskinen", "asds", 18));
-            Opint2.Oppilas.Add(new Opiskelija("Pekka Jormakka", "", 18));
-            Opint2.Opettaja.Add(new Opettaja("Arja koriseva", "", 59));
+            Op2.Oppilas.Add(new Opiskelija("Kalle Koskinen", "Q203", 18));
+            Op2.Oppilas.Add(new Opiskelija("Olli Koskinen", "asds", 18));
+            Op2.Oppilas.Add(new Opiskelija("Pekka Jormakka", "", 18));
+            Op2.Opettaja.Add(new Opettaja("Arja koriseva", "", 59));
 
-            Opintojakso Opint3 = new Opintojakso("Olio2");
+            Opintojakso Op3 = new Opintojakso("Olio2");
 
-            Opint3.Oppilas.Add(new Opiskelija("Kalle Koskinen", "Q203", 18));
-            Opint3.Oppilas.Add(new Opiskelija("Olli Koskinen", "asds", 18));
-            Opint3.Oppilas.Add(new Opiskelija("Pekka Jormakka", "", 18));
-            Opint3.Opettaja.Add(new Opettaja("Arja koriseva", "", 59));
+            Op3.Oppilas.Add(new Opiskelija("Kalle Koskinen", "Q203", 18));
+            Op3.Oppilas.Add(new Opiskelija("Olli Koskinen", "asds", 18));
+            Op3.Oppilas.Add(new Opiskelija("Pekka Jormakka", "", 18));
+            Op3.Opettaja.Add(new Opettaja("Arja koriseva", "", 59));
 
             Tutkinto Tutk1 = new Tutkinto("AMK");
-            Tutk1.Jakso.Add(Opint1);
-            Tutk1.Jakso.Add(Opint2);
-            Tutk1.Jakso.Add(Opint3);
+            Tutk1.Jakso.Add(Op1);
+            Tutk1.Jakso.Add(Op2);
+            Tutk1.Jakso.Add(Op3);
 
             Laitos Jamk = new Laitos("Jamk");
             Jamk.Tutkintotyyppi.Add(Tutk1);
 
-            Opintojakso Opint4 = new Opintojakso("Ohjelmointi");
+            Opintojakso Op4 = new Opintojakso("Ohjelmointi");
 
-            Opint3.Oppilas.Add(new Opiskelija("Kalle Koskinen", "Q203", 18));
-            Opint3.Oppilas.Add(new Opiskelija("Olli Koskinen", "asds", 18));
-            Opint3.Oppilas.Add(new Opiskelija("Pekka Jormakka", "", 18));
-            Opint3.Opettaja.Add(new Opettaja("Arja koriseva", "", 59));
+            Op4.Oppilas.Add(new Opiskelija("Kalle Koskinen", "Q203", 18));
+            Op4.Oppilas.Add(new Opiskelija("Olli Koskinen", "asds", 18));
+            Op4.Oppilas.Add(new Opiskelija("Pekka Jormakka", "", 18));
+            Op4.Opettaja.Add(new Opettaja("Arja koriseva", "", 59));
 
-            Opintojakso Opint5 = new Opintojakso("C#");
-
-            Opint3.Oppilas.Add(new Opiskelija("Kalle Koskinen", "Q203", 18));
-            Opint3.Oppilas.Add(new Opiskelija("Olli Koskinen", "asds", 18));
-            Opint3.Oppilas.Add(new Opiskelija("Pekka Jormakka", "", 18));
-            Opint3.Opettaja.Add(new Opettaja("Arja koriseva", "", 59));
-
-            Opintojakso Opint6 = new Opintojakso("C++");
-
-            Opint3.Oppilas.Add(new Opiskelija("Kalle Koskinen", "Q203", 18));
-            Opint3.Oppilas.Add(new Opiskelija("Olli Koskinen", "asds", 18));
-            Opint3.Oppilas.Add(new Opiskelija("Pekka Jormakka", "", 18));
-            Opint3.Opettaja.Add(new Opettaja("Arja koriseva", "", 59));
-
+            
             Tutkinto Tutk2 = new Tutkinto("AMK");
-            Tutk2.Jakso.Add(Opint4);
-            Tutk2.Jakso.Add(Opint5);
-            Tutk2.Jakso.Add(Opint6);
+            Tutk2.Jakso.Add(Op4);
+           
 
             Laitos Jyamk = new Laitos("Jyamk");
             Jyamk.Tutkintotyyppi.Add(Tutk2);
