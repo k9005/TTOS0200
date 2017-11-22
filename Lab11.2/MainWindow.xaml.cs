@@ -20,7 +20,7 @@ namespace Lab11._2
     /// </summary>
     public partial class MainWindow : Window
     {
-        private List<Pelaaja> pelaajat;
+        private List<Pelaaja> Pelaajat;
         public MainWindow()
         {
             InitializeComponent();
@@ -29,7 +29,7 @@ namespace Lab11._2
 
         private void btnhaku_Click(object sender, RoutedEventArgs e)
         {
-            dgpelaajat.ItemsSource = pelaajat;
+            dgpelaajat.ItemsSource = Pelaajat;
         }
     }
 }
